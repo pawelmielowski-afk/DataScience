@@ -1,4 +1,3 @@
-
 import random
 import pandas as pd
 import numpy as np
@@ -45,8 +44,7 @@ ax1.set_ylabel('Avarege count born')
 ax1.set_xticks(range(1, 13))
 ax1.set_xticklabels(month_labels, rotation=45)
 ax1.grid(True, linestyle='--', alpha=0.5)
-
-
+ax1.xaxis.set_major_formatter(plt.ScalarFormatter())
 # Subplot 2: 1990–2000
 
 ax2.scatter(avarageSecond.index, avarageSecond.values, color='tomato', s=80, zorder=3)
@@ -55,7 +53,7 @@ ax2.set_xlabel('Month')
 ax2.set_ylabel('Average count born')
 ax2.set_xticks(range(1, 13))
 ax2.set_xticklabels(month_labels, rotation=45)
-# ax2.xaxis.set_major_formatter(plt.NullFormatter())
+ax2.xaxis.set_major_formatter(plt.ScalarFormatter())
 ax2.grid(True, linestyle='--', alpha=0.5)
 
 plt.suptitle('Births in USA — comparison', fontsize=15, fontweight='bold')
