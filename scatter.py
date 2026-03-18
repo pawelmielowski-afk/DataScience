@@ -12,12 +12,9 @@ plt.style.use('classic')
 
 dayOfBorn = pd.read_csv('C:\\Users\\Mielek\\Downloads\\births.csv')
 
-
 scaleYear = dayOfBorn[dayOfBorn['year'] < 2001]
 
 # scaleYear
-
-
 
 fristSummer = scaleYear[(scaleYear['year'] >= 1969) & (scaleYear['year'] < 1990)]
 secondSummer = scaleYear[(scaleYear['year'] >= 1990) & (scaleYear['year'] < 2001 )]
@@ -29,9 +26,7 @@ avarageSecond = fristSummer.groupby('month')['births'].mean()
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 5))
 
 
-
 plt.style.use('classic')
-
 
 month_labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
  'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
